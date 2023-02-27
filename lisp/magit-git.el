@@ -1956,7 +1956,7 @@ SORTBY is a key or list of keys to pass to the `--sort' flag of
             (magit-git-lines "show-ref"))))
 
 (defun magit-list-refnames (&optional namespaces include-special)
-  (nconc (magit-list-refs namespaces "%(refname:short)")
+  (nconc (magit-list-refs namespaces "%(refname:lstrip=2)")
          (and include-special
               (magit-list-special-refnames))))
 
